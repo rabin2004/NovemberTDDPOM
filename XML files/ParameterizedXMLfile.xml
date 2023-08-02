@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<!-- include-only run included method, rest will be excluding | exclude-only that method will be excluded, rest will run -->
+<suite name="Release 1.0 Regression">
+	<parameter name="link" value="Saved"/>
+  <test thread-count="5" name="Selected Testing">
+    <classes>
+      <class name="testPkg.HomePageMenuLinksTest">
+		  <methods>
+			  <include name="menuLinkTestFromXMLparameter"/>
+		  </methods>
+      </class>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

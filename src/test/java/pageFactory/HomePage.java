@@ -1,5 +1,6 @@
 package pageFactory;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -28,6 +29,18 @@ public class HomePage extends BaseClass{
 	
 	public void clickSearchBtn() {
 		searchBtn.click();
+	}
+	
+	public void homePageMenuLinkClick(String link) {
+		driver.findElement(By.linkText(link)).click();
+	}
+	
+	public boolean homePageMenuLinkQuickPageTitleValidation(String link) {
+		return driver.getTitle().contains(link);
+	}
+	
+	public boolean homePageMenuLinkQuickPageURLValidation(String link) {
+		return driver.getCurrentUrl().contains(link);
 	}
 
 }

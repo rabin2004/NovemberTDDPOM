@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="E2E Regression for Release 1.0">
+  <test name="E2E Test">
+	  <groups>
+		  <run>
+			  <include name="E2E_Test"/>
+		  </run>
+	  </groups>
+    <packages>
+      <package name="testPkg"/>
+    </packages>
+  </test> <!-- Regression Test -->
+  
+  <test name="Integration Test">
+	  <groups>
+		  <run>
+			  <include name="Integration_Test"/>
+		  </run>
+	  </groups>
+    <packages>
+      <package name="testPkg"/>
+    </packages>
+  </test> <!-- Regression Test -->
+  
+  <test name="Data Driven Test">
+	  <groups>
+		  <run>
+			  <include name="Data_Driven_Test"/>
+		  </run>
+	  </groups>
+    <packages>
+      <package name="testPkg"/>
+    </packages>
+  </test> <!-- Regression Test -->
+  
+  <test name="Regression Test">
+	  <groups>
+		  <run>
+			  <include name="Regression_Test"/>
+		  </run>
+	  </groups>
+    <packages>
+      <package name="testPkg"/>
+    </packages>
+  </test> <!-- Regression Test -->
+</suite> <!-- Regression for Release 1.0 -->

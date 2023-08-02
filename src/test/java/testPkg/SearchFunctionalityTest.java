@@ -10,11 +10,11 @@ import basePkg.BaseClass;
 import pageFactory.HomePage;
 import pageFactory.SearchResultPage;
 
-public class SearchFuntionalityTest extends BaseClass{
+public class SearchFunctionalityTest extends BaseClass{
 	HomePage hp;
 	SearchResultPage srp;
 	
-	@BeforeClass
+	@BeforeClass(alwaysRun=true)
 	public void loadApp() {
 		initialization();
 		hp = new HomePage();
@@ -22,24 +22,28 @@ public class SearchFuntionalityTest extends BaseClass{
 
 	}
 
-	@AfterClass
+	@AfterClass(alwaysRun=true)
 	public void closeApp() {
 		tearDown();
 	}
 
-	@AfterMethod
+	@AfterMethod(alwaysRun=true)
 	public void backToHomePage() {
 		backToLastPage();
 	}
 	
-	@Test(dataProviderClass = dataPkg.SearchFunctionalityTestData.class, dataProvider = "positiveSearchFunctionalityData", priority = 1)
+	@Test(dataProviderClass = dataPkg.SearchFunctionalityTestData.class, 
+			dataProvider = "positiveSearchFunctionalityData", priority = 1,
+			groups= {"E2E_Test","Regression_Test","Data_Driven_Test"})
 	public void positiveSearchFunctionalityTestByClickingSearchBtn(String product) {
 		hp.enterProductInSearchTxtBox(product);
 		hp.clickSearchBtn();
 		Assert.assertTrue(srp.validateSearchResultHeader());
 	}
 
-	@Test(enabled = true, dataProviderClass = dataPkg.SearchFunctionalityTestData.class, dataProvider = "negativeSearchFunctionalityData", priority = 3)
+	@Test(enabled = true, dataProviderClass = dataPkg.SearchFunctionalityTestData.class, 
+			dataProvider = "negativeSearchFunctionalityData", priority = 3,
+			groups= {"Integration_Test","Regression_Test","Data_Driven_Test"})
 	public void negativeSearchFunctionalityTestByClickingSearchBtn(String invalidProduct) {
 		hp.enterProductInSearchTxtBox(invalidProduct);
 		hp.clickSearchBtn();

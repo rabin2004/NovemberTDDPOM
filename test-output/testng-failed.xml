@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [E2E Regression for Release 1.0]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Data Driven Test(failed)">
+    <groups>
+      <run>
+        <include name="Data_Driven_Test"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="testPkg.HomePageMenuLinksTest">
+        <methods>
+          <include name="restMenuLinkTest" invocation-numbers="0"/>
+          <include name="closeApp"/>
+          <include name="backToHomePage"/>
+          <include name="loadApp"/>
+        </methods>
+      </class> <!-- testPkg.HomePageMenuLinksTest -->
+      <class name="testPkg.SearchFunctionalityTest">
+        <methods>
+          <include name="loadApp"/>
+          <include name="backToHomePage"/>
+          <include name="closeApp"/>
+          <include name="negativeSearchFunctionalityTestByClickingSearchBtn" invocation-numbers="1 2"/>
+        </methods>
+      </class> <!-- testPkg.SearchFunctionalityTest -->
+    </classes>
+  </test> <!-- Data Driven Test(failed) -->
+  <test thread-count="5" name="Regression Test(failed)">
+    <groups>
+      <run>
+        <include name="Regression_Test"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="testPkg.HomePageMenuLinksTest">
+        <methods>
+          <include name="restMenuLinkTest" invocation-numbers="0"/>
+          <include name="closeApp"/>
+          <include name="backToHomePage"/>
+          <include name="loadApp"/>
+        </methods>
+      </class> <!-- testPkg.HomePageMenuLinksTest -->
+    </classes>
+  </test> <!-- Regression Test(failed) -->
+</suite> <!-- Failed suite [E2E Regression for Release 1.0] -->

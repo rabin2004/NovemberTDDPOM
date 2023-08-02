@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-08-01T23:18:19 EDT" name="Release 1.0 Regression" finished-at="2023-08-01T23:19:01 EDT" duration-ms="42185">
+    <groups>
+      <group name="Smoke_Test">
+        <method signature="HomePageMenuLinksTest.menuLinkTestFromXMLparameter(java.lang.String)[pri:0, instance:testPkg.HomePageMenuLinksTest@d86a6f]" name="menuLinkTestFromXMLparameter" class="testPkg.HomePageMenuLinksTest"/>
+      </group> <!-- Smoke_Test -->
+    </groups>
+    <test started-at="2023-08-01T23:18:19 EDT" name="Selected Testing" finished-at="2023-08-01T23:19:01 EDT" duration-ms="42185">
+      <class name="testPkg.HomePageMenuLinksTest">
+        <test-method is-config="true" signature="loadApp()[pri:0, instance:testPkg.HomePageMenuLinksTest@d86a6f]" started-at="2023-08-01T23:18:19 EDT" name="loadApp" finished-at="2023-08-01T23:18:46 EDT" duration-ms="26782" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadApp -->
+        <test-method signature="menuLinkTestFromXMLparameter(java.lang.String)[pri:0, instance:testPkg.HomePageMenuLinksTest@d86a6f]" started-at="2023-08-01T23:18:46 EDT" name="menuLinkTestFromXMLparameter" finished-at="2023-08-01T23:18:55 EDT" duration-ms="9301" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Saved]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- menuLinkTestFromXMLparameter -->
+        <test-method is-config="true" signature="backToHomePage()[pri:0, instance:testPkg.HomePageMenuLinksTest@d86a6f]" started-at="2023-08-01T23:18:55 EDT" name="backToHomePage" finished-at="2023-08-01T23:18:59 EDT" duration-ms="3967" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- backToHomePage -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:testPkg.HomePageMenuLinksTest@d86a6f]" started-at="2023-08-01T23:18:59 EDT" name="closeApp" finished-at="2023-08-01T23:19:01 EDT" duration-ms="1833" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+      </class> <!-- testPkg.HomePageMenuLinksTest -->
+    </test> <!-- Selected Testing -->
+  </suite> <!-- Release 1.0 Regression -->
+</testng-results>
